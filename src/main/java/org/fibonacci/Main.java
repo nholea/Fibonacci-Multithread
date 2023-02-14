@@ -1,4 +1,4 @@
-package org.example;
+package org.fibonacci;
 
 public class Main {
 
