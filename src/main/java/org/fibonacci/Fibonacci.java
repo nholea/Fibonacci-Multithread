@@ -1,15 +1,38 @@
 package org.fibonacci;
 
-public class Fibonacci {
+public class Fibonacci extends Thread{
 
-  public static int calculate(int number) {
-    if (number == 0) {
-      return 0;
+  private final String number;
+
+  public Fibonacci(String number) {
+    this.number = number;
+  }
+
+  @Override
+  public void run() {
+    int previouspreviousNumber = 0;
+    int previousNumber = 0;
+    int currentNumber = 1;
+
+    for (int i = 1; i < Long.parseLong(number); i++) {
+      previouspreviousNumber = previousNumber;
+      previousNumber = currentNumber;
+      currentNumber = previouspreviousNumber + previousNumber;
     }
-    if (number == 1) {
-      return 1;
+    System.out.println(currentNumber);
+  }
+
+  public long calculate(String number) {
+    int previouspreviousNumber=0;
+    int previousNumber = 0;
+    int currentNumber = 1;
+
+    for (int i = 1; i < Long.parseLong(number); i++) {
+      previouspreviousNumber = previousNumber;
+      previousNumber = currentNumber;
+      currentNumber = previouspreviousNumber + previousNumber;
     }
-    return calculate(number - 1) + calculate(number - 2);
+    return currentNumber;
   }
 
 }
