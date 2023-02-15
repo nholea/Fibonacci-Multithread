@@ -6,6 +6,6 @@ public class Main {
     Fibonacci fibonacci = new Fibonacci("3");
     OptionsMenu optionsMenu = new OptionsMenu();
     Program program = new Program(fibonacci,optionsMenu);
-    program.run();
+    program.start();
   }
 }
