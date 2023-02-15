@@ -29,7 +29,7 @@ public class Fibonacci extends Thread{
         previousNumber = currentNumber;
         currentNumber = previouspreviousNumber + previousNumber;
       }
-      Thread.sleep(500);
+      Thread.sleep(10000);
 
     } catch (InterruptedException e) {
       throw new RuntimeException(e);
