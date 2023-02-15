@@ -48,7 +48,7 @@ public class Program {
           fibonacciThreads.get(index).getNumber()
         );
         taskResults.put(
-          "Fibonacci " + fibonacciThreads.get(index).getNumber(),
+          "Fibonacci of " + fibonacciThreads.get(index).getNumber(),
           fibonacciThreads.get(index).getFibonacci()
         );
         start();
@@ -58,6 +58,10 @@ public class Program {
         start();
         break;
       case "4":
+        break;
+      default:
+        optionsMenu.invalidOption();
+        start();
         break;
     }
   }
