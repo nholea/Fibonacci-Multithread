@@ -5,8 +5,7 @@ public class Main {
   public static void main(String[] args) {
     Fibonacci fibonacci = new Fibonacci("3");
     OptionsMenu optionsMenu = new OptionsMenu();
-    Thread thread = new Thread();
-    thread.start();
-
+    Program program = new Program(fibonacci,optionsMenu);
+    program.run();
   }
 }

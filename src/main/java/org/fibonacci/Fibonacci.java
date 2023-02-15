@@ -8,6 +8,10 @@ public class Fibonacci extends Thread{
     this.number = number;
   }
 
+  public String getNumber() {
+    return number;
+  }
+
   @Override
   public void run() {
     int previouspreviousNumber = 0;
@@ -19,7 +23,7 @@ public class Fibonacci extends Thread{
       previousNumber = currentNumber;
       currentNumber = previouspreviousNumber + previousNumber;
     }
-    System.out.println(currentNumber);
+    System.out.print("Fibonacci" + currentNumber);
   }
 
   public long calculate(String number) {
