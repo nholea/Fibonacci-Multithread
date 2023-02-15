@@ -2,7 +2,7 @@ package org.fibonacci;
 
 public class Fibonacci extends Thread{
 
-  private String number;
+  private final String number;
 
   private Long currentNumber = 1L;
 
@@ -22,7 +22,7 @@ public class Fibonacci extends Thread{
   @Override
   public void run() {
     try {
-      Long previouspreviousNumber = 0L;
+      Long previouspreviousNumber;
       Long previousNumber = 0L;
 
       for (int i = 1; i < Long.parseLong(number); i++) {

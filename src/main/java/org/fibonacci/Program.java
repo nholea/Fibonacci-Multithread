@@ -9,13 +9,10 @@ import java.util.stream.IntStream;
 
 public class Program {
 
-  ArrayList<Fibonacci> fibonacciThreads = new ArrayList();
-  HashMap<String, Long> taskResults = new HashMap<>();
-
-
-
   private final OptionsMenu optionsMenu;
 
+  ArrayList<Fibonacci> fibonacciThreads = new ArrayList<>();
+  HashMap<String, Long> taskResults = new HashMap<>();
 
   public Program(OptionsMenu optionsMenu) {
 
@@ -45,8 +42,15 @@ public class Program {
         String taskToExecute = userInput();
         int index = Integer.parseInt(taskToExecute);
         fibonacciThreads.get(index).start();
-        System.out.printf("%s -> Fibonacci of %s started\n", fibonacciThreads.get(index).getName(), fibonacciThreads.get(index).getNumber());
-        taskResults.put("Fibonacci " + fibonacciThreads.get(index).getNumber(), fibonacciThreads.get(index).getFibonacci());
+        System.out.printf(
+          "%s -> Fibonacci of %s started\n",
+          fibonacciThreads.get(index).getName(),
+          fibonacciThreads.get(index).getNumber()
+        );
+        taskResults.put(
+          "Fibonacci " + fibonacciThreads.get(index).getNumber(),
+          fibonacciThreads.get(index).getFibonacci()
+        );
         start();
         break;
       case "3":
@@ -61,7 +65,11 @@ public class Program {
   private void showTasksCreated() {
     IntStream.range(0, fibonacciThreads.size())
       .forEach(index ->
-        System.out.printf("Task %d: Fibonacci of %s state: %s \n", index, fibonacciThreads.get(index).getNumber(),fibonacciThreads.get(index).getState()));
+        System.out.printf(
+          "Task %d: Fibonacci of %s state: %s \n",
+          index, fibonacciThreads.get(index).getNumber(),
+          fibonacciThreads.get(index).getState())
+      );
   }
 
   private void tasksAvailableToExecute() {
@@ -77,7 +85,7 @@ public class Program {
     }
   }
 
-  private String userInput(){
+  private String userInput() {
     Scanner scanner = new Scanner(System.in);
     return scanner.nextLine();
   }
