@@ -36,5 +36,4 @@ public class Fibonacci extends Thread{
       throw new RuntimeException(e);
     }
   }
-
 }
