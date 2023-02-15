@@ -2,7 +2,7 @@ package org.fibonacci;
 
 public class Fibonacci extends Thread{
 
-  private final String number;
+  private String number;
 
   private Long currentNumber = 1L;
 
@@ -13,6 +13,7 @@ public class Fibonacci extends Thread{
   public String getNumber() {
     return number;
   }
+
 
   public Long getFibonacci() {
     return currentNumber;

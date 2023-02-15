@@ -9,17 +9,16 @@ import java.util.stream.IntStream;
 
 public class Program {
 
-
-
-  private final Fibonacci fibonacci;
-
-  private final OptionsMenu optionsMenu;
-
   ArrayList<Fibonacci> fibonacciThreads = new ArrayList();
   HashMap<String, Long> taskResults = new HashMap<>();
 
-  public Program(Fibonacci fibonacci, OptionsMenu optionsMenu) {
-    this.fibonacci = fibonacci;
+
+
+  private final OptionsMenu optionsMenu;
+
+
+  public Program(OptionsMenu optionsMenu) {
+
     this.optionsMenu = optionsMenu;
   }
 
