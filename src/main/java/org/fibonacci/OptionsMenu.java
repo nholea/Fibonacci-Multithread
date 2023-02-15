@@ -1,6 +1,5 @@
 package org.fibonacci;
 
-
 public class OptionsMenu {
 
   public void choose() {
@@ -15,5 +14,4 @@ public class OptionsMenu {
   public void invalidOption() {
     System.out.println("Invalid option. Try again!");
   }
-
 }
